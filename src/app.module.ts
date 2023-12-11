@@ -1,8 +1,8 @@
 import { Module } from '@nestjs/common';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
-import { CategoryModule } from './category/category.modules';
-import { ProductModule } from './products/product.module';
+import { CategoryModule } from './modules/category.modules';
+import { ProductModule } from './modules/product.module';
 
 @Module({
   imports: [CategoryModule, ProductModule],
