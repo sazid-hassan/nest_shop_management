@@ -25,4 +25,14 @@ export class ProductService {
         }
 
     }
+
+    async deleteProduct(id: number): Promise<any> {
+        try {
+            const sql = `DELETE FROM products WHERE product_id = ${id}`;
+            return await this.databaseService.executeQuery(sql);
+        }
+        catch (error) {
+            return error
+        }
+    }
 }
